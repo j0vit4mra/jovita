@@ -1,0 +1,169 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8dbdb;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+/* Navbar */
+ul {
+    list-style: none;
+    background: #00492c;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Menu rata tengah */
+    top: 175px; /* Jarak dari atas untuk navbar */
+    left: 0;
+    z-index: 1000; /* Pastikan navbar berada di atas konten */
+}
+
+/* Atur margin konten agar tidak tertutup oleh navbar */
+.content-container {
+    margin-top: 200px; /* Sesuaikan margin dengan total tinggi header dan navbar (130px header + 55px navbar) */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling untuk menu items */
+ul li {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    padding: 0 15px;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: #fdcc07;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Arial Black', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+ul a:hover {
+    background-color: #f7f1f5;
+    transform: scale(1.05); /* Efek perbesaran */
+}
+
+/* Dropdown */
+ul li .dropdown {
+    background: #00492c;
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    top: 60px; /* Dropdown muncul di bawah menu */
+    left: 0;
+    min-width: 200px;
+}
+
+ul li:hover .dropdown {
+    display: block;
+}
+
+ul li ul.dropdown li a img {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+ul li ul.dropdown li a:hover img {
+    border-radius: 5px;
+}
+
+ul li ul.dropdown li {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+/* Halaman penutupan */
+.closing-page {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+/* Judul */
+h1 {
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    color: #00492c;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+p {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.section {
+    background-color: #00492c;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr; 
+    }
+}
+
+p{
+    text-align: justify;
+    margin-top: 15px;
+}
+
+h2{
+    color: #fdcc07;
+}
+
+h4{
+    text-align: justify;
+    margin-top: 8px; 
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
